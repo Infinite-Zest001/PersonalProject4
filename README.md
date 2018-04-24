@@ -1,9 +1,12 @@
-# Project Start-up Code
+# Proejct 4: The “Treasure Hunt” Game with GUI and I/O
+ *A Java GUI Application with Networking and File I/O Functionality*
 
-This repository contains the start-up code of class projects in
-CISC 3120 Sections MW8 and MW2, Spring 2018
+### Link to Project Startup Code:
+https://github.com/CISC3120SP18/Project4StartupCode
 
-
-- Project 3: TreasureHuntFX
-
-
+### Versioning :
+| CommitVer:    | Meaning                                            |  
+| ------------- |:--------------------------------------------------:|
+| X.0           | Stable-release for public use                      | 
+| 0.X           | New feature/bug fix in developement                |
+| 0.0X          | Code refactor or readme change                     |  
