@@ -22,6 +22,8 @@ import javafx.scene.layout.StackPane;
 public class TreasureFrameViewController {
 	private final static Logger LOGGER = LoggerFactory.getLogger(TreasureFrameViewController.class);
 	
+	public boolean exitPermission;
+	
     @FXML
     private TextField xPosTreasure;
 
@@ -130,13 +132,16 @@ public class TreasureFrameViewController {
 	}
 	
 	public void exitGameAction() {
-		//FrameViewController frameViewController;
+		exitPermission = true;
 	}
 	
 	public void setOnButtonTreasureAction(EventHandler<ActionEvent> handler) {
 		buttonTreasure.setOnAction(handler);
 	}
 
+	public void setOnExitGameAction(EventHandler<ActionEvent> handler) {
+		exitGame.setOnAction(handler);
+	}
 	
 	private void initializeScore() {
 		totalScoreLabel.setText(String.format(GameSettings.SCORE_FORMAT, 0));

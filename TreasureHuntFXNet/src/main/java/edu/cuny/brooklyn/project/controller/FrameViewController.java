@@ -105,6 +105,11 @@ public class FrameViewController {
 		}
 	}
 
+	public void exitGame() {
+		statusBroadcaster.close();
+		Platform.exit();
+	}
+	
 	@FXML
 	void newGame(ActionEvent event) {
 
