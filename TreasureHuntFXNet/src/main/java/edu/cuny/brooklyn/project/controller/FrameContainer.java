@@ -111,9 +111,9 @@ public class FrameContainer {
 		puzzlerFrameController.setOnAnswerButtonAction(e -> answerPuzzler());
 		treasureFrameController.setOnButtonTreasureAction(e -> treasureFrameController.doTreasureLocationAction());
 		treasureFrameController.setOnExitGameAction(e -> {treasureFrameController.exitGameAction(); 
-																	mainViewController.exitGame();
-														}
-													);
+			mainViewController.exitGame();
+		});
+		treasureFrameController.setOnNextLevelAction(e -> startGame());
 		
 		if (treasureHuntState == null) {
 			treasureGenerator = new TreasureGenerator();

@@ -33,12 +33,12 @@ public class PuzzlerFrameViewController {
 		puzzlerMaker = new PuzzlerMaker();
 	}
 	
-
 	public int getAnsweringAttempts() {
 		return answeringAttempts;
 	}  
 	
 	public void showNewPuzzler() {
+		puzzlerAnswer.clear();
 		puzzler = puzzlerMaker.make();
 		puzzlerLabel.setText(puzzler.getMessage());
 		answeringAttempts = 0;

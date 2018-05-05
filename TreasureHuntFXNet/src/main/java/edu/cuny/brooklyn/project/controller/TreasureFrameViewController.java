@@ -92,6 +92,9 @@ public class TreasureFrameViewController {
 	}
 
 	public void startLocatingTreasure(String clue) {
+		xPosTreasure.clear();
+		yPosTreasure.clear();
+		clearCanvas();
 		startGuessing(clue);
 
 		canvas.widthProperty().removeListener(resizeListener);
@@ -143,6 +146,10 @@ public class TreasureFrameViewController {
 		exitGame.setOnAction(handler);
 	}
 	
+	public void setOnNextLevelAction(EventHandler<ActionEvent> handler) {
+		nextLevel.setOnAction(handler);
+	}
+	
 	private void initializeScore() {
 		totalScoreLabel.setText(String.format(GameSettings.SCORE_FORMAT, 0));
 		roundScoreLabel.setText(String.format(GameSettings.SCORE_FORMAT, 0));
@@ -175,7 +182,7 @@ public class TreasureFrameViewController {
 		clueLabel.setVisible(true);
 		
 		responseLabel.setDisable(false);
-		responseLabel.setVisible(true);
+		responseLabel.setVisible(false);
 	
 		xPosTreasure.setDisable(false);
 		xPosTreasure.setVisible(true);
