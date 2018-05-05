@@ -42,6 +42,12 @@ public class TreasureFrameViewController {
 
     @FXML
     private Label responseLabel;
+    
+    @FXML
+    private Button nextLevel;
+    
+    @FXML
+    private Button exitGame;
 
     @FXML
     private Canvas canvas;
@@ -65,6 +71,8 @@ public class TreasureFrameViewController {
 		initializeScore();
 		
 		buttonTreasure.setOnAction(e -> doTreasureLocationAction());
+		nextLevel.setOnAction(e -> nextLevelAction());
+		exitGame.setOnAction(e -> exitGameAction());
 		
 		canvas.widthProperty().bind(canvasHolder.widthProperty().subtract(20));
 		canvas.heightProperty().bind(canvasHolder.heightProperty().subtract(20));
@@ -109,11 +117,20 @@ public class TreasureFrameViewController {
 			doneGuessing();
 			showTreasure();
 			updateScore();
+			
 		} else {
 			LOGGER.debug("No treasure at location (" + xInput + "," + yInput + ")");
 			responseLabel.setVisible(true);
 			responseLabel.setText(I18n.getBundle().getString(GameSettings.MSG_NO_LABEL_AT_LOCATION_KEY) + " (" + xInput + "," + yInput + ")");
 		}
+	}
+	
+	public void nextLevelAction() {
+		//TBD
+	}
+	
+	public void exitGameAction() {
+		//FrameViewController frameViewController;
 	}
 	
 	public void setOnButtonTreasureAction(EventHandler<ActionEvent> handler) {
@@ -136,19 +153,39 @@ public class TreasureFrameViewController {
 	
 	private void doneGuessing() {
 		clueLabel.setVisible(false);
-		responseLabel.setVisible(false);
+		responseLabel.setDisable(true);
 		xPosTreasure.setDisable(true);
 		yPosTreasure.setDisable(true);
 		buttonTreasure.setDisable(true);
+		
+		nextLevel.setDisable(false);
+		nextLevel.setVisible(true);
+		
+		exitGame.setDisable(false);
+		exitGame.setVisible(true);
 	}
 	
 	private void startGuessing(String clue) {
 		clueLabel.setText(clue);
 		clueLabel.setVisible(true);
-		responseLabel.setVisible(false);
+		
+		responseLabel.setDisable(false);
+		responseLabel.setVisible(true);
+	
 		xPosTreasure.setDisable(false);
+		xPosTreasure.setVisible(true);
+		
 		yPosTreasure.setDisable(false);
+		yPosTreasure.setVisible(true);
+		
 		buttonTreasure.setDisable(false);
+		buttonTreasure.setVisible(true);
+		
+		nextLevel.setDisable(true);
+		nextLevel.setVisible(false);
+		
+		exitGame.setDisable(true);
+		exitGame.setVisible(false);
 	}
 	
 	private void drawTreasure() {
