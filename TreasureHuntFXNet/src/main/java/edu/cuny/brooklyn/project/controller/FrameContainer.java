@@ -35,6 +35,9 @@ public class FrameContainer {
 	private Parent flashFrame;
 	private FlashFrameViewController flashFrameController;
 	
+	private Parent settingsFrame;
+	//private SettingsFrameViewController settingsFrameController;
+	
 	private TreasureGenerator treasureGenerator;
 	
 	private TreasureHuntState treasureHuntState;
