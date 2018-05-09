@@ -28,7 +28,7 @@
          <GridPane.margin>
             <Insets left="20.0" right="20.0" />
          </GridPane.margin></Button>
-      <Button fx:id="settingsButton" mnemonicParsing="false" text="Button" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+      <Button fx:id="settingsButton" mnemonicParsing="false" text="Button" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.columnIndex="2">
          <GridPane.margin>
             <Insets left="20.0" right="20.0" />
          </GridPane.margin></Button>

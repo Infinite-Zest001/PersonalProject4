@@ -59,11 +59,11 @@ public class GameSettings {
 	public static final String FLASH_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_flashframeview.fxml";
 	public static final String SETTINGS_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_settingsframeview.fxml";
 	
-	public final static String MSG_SETTINGS_PUZZLER_SLIDING_CUPS_KEY= "slidingCupsPuzzler";
+	public final static String MSG_SETTINGS_PUZZLER_SLIDING_CUPS_KEY = "slidingCupsPuzzler";
 	public final static String MSG_SETTINGS_PUZZLER_SQRT_KEY = "sqrtPuzzler";
 	public final static String MSG_SETTINGS_PUZZLER_RANDOM_KEY = "randomPuzzler";
 	public final static String MSG_SETTINGS_PUZZLER_TITLE_KEY = "puzzlerSettingsHeader";
-	public final static String MSG_SETTINGS_DIFFC_EASY_KEY= "easyDiffc";
+	public final static String MSG_SETTINGS_DIFFC_EASY_KEY = "easyDiffc";
 	public final static String MSG_SETTINGS_DIFFC_NORMAL_KEY = "normalDiffc";
 	public final static String MSG_SETTINGS_DIFFC_HARD_KEY = "hardDiffc";
 	

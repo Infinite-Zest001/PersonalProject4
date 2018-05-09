@@ -151,8 +151,12 @@ public class FrameContainer {
 	}
 	
 	public void showSettingsScreen() {
+		showFlashScreen(false);
+	}
+	
+	public void showSettingsScreen(boolean reload) {
 		LOGGER.debug("showing setting screen");
-		showScreenWithFrame(this.settingsFrame, GameSettings.MSG_APP_TITLE_SETTINGS_KEY);
+		showScreenWithFrame(reload, this.settingsFrame, GameSettings.MSG_APP_TITLE_SETTINGS_KEY);
 	}
 	
 	private void showScreenWithFrame(Parent view, String title_key) {

@@ -43,8 +43,12 @@ public class SettingsFrameViewController {
 	private ToggleButton hardDiffc;
 	
     public void initialize() {
-		saveAndReturn.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_SAVE_KEY));
-		//puzzlerGroup.setText(I18n.getBundle().getString(GameSettings.MSG_START_GAME_KEY));
+    	puzzlerLabel.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_PUZZLER_TITLE_KEY));
+    	randomPuzzler.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_PUZZLER_RANDOM_KEY));
+    	sqrtPuzzler.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_PUZZLER_SQRT_KEY));
+    	slidingCupsPuzzler.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_PUZZLER_SLIDING_CUPS_KEY));
+  
+		//saveAndReturn.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_SAVE_KEY));
 		//settingsButton.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_GAME_KEY));
     }
 	
