@@ -36,7 +36,7 @@ public class FrameContainer {
 	private FlashFrameViewController flashFrameController;
 	
 	private Parent settingsFrame;
-	//private SettingsFrameViewController settingsFrameController;
+	private SettingsFrameViewController settingsFrameController;
 	
 	private TreasureGenerator treasureGenerator;
 	
@@ -48,14 +48,11 @@ public class FrameContainer {
 		initializeContainer(stage, bundle);
 	}
 	
-
 	public void reload(ResourceBundle bundle) throws IOException {
 		initializeContainer(stage, bundle);
 		showFlashScreen(true);
 	}
 	
-
-
 	public void setStatusBroadcaster(StatusBroadcaster statusBroadcaster) {
 		if (statusBroadcaster == null) {
 			throw new IllegalArgumentException("StatusBroadcaster object must not be null.");
@@ -109,7 +106,11 @@ public class FrameContainer {
 		flashFrame = fxmlLoader.load();
 		flashFrameController = fxmlLoader.getController();
 		
+		fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource(GameSettings.SETTINGS_VIEW_PATH), bundle);
+		settingsFrame = fxmlLoader.load();
+		settingsFrameController = fxmlLoader.getController();
 		
+		flashFrameController.setOnSettingsButtonAction(e -> gameSettings());
 		flashFrameController.setOnStartButtonAction(e -> startGame());
 		puzzlerFrameController.setOnAnswerButtonAction(e -> answerPuzzler());
 		treasureFrameController.setOnButtonTreasureAction(e -> treasureFrameController.doTreasureLocationAction());
@@ -149,6 +150,11 @@ public class FrameContainer {
 		showScreenWithFrame(this.puzzlerFrame, GameSettings.MSG_APP_TITLE_PUZZLER_KEY);
 	}
 	
+	public void showSettingsScreen() {
+		LOGGER.debug("showing setting screen");
+		showScreenWithFrame(this.settingsFrame, GameSettings.MSG_APP_TITLE_SETTINGS_KEY);
+	}
+	
 	private void showScreenWithFrame(Parent view, String title_key) {
 		showScreenWithFrame(false, view, title_key);
 	}
@@ -171,6 +177,11 @@ public class FrameContainer {
 	
 	private void startGame() {
 		showPuzzlerScreen();
+		mainViewController.disableLocaleChange();
+	}
+	
+	private void gameSettings() {
+		showSettingsScreen();
 		mainViewController.disableLocaleChange();
 	}
 }

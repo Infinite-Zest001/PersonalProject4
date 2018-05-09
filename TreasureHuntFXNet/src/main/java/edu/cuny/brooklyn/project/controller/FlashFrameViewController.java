@@ -15,6 +15,9 @@ public class FlashFrameViewController {
     @FXML
     private Button startButton;
     
+    @FXML
+    private Button settingsButton;
+    
     /*
      * the initialize() method:
      * see 
@@ -23,9 +26,14 @@ public class FlashFrameViewController {
     public void initialize() {
 		flashLabel.setText(I18n.getBundle().getString(GameSettings.MSG_GAME_DESCRIPTION_KEY));
 		startButton.setText(I18n.getBundle().getString(GameSettings.MSG_START_GAME_KEY));
+		settingsButton.setText(I18n.getBundle().getString(GameSettings.MSG_SETTINGS_GAME_KEY));
     }
     
     public void setOnStartButtonAction(EventHandler<ActionEvent> handler) {
     	startButton.setOnAction(handler);
+    }
+    
+    public void setOnSettingsButtonAction(EventHandler<ActionEvent> handler) {
+    	settingsButton.setOnAction(handler);
     }
 }

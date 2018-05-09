@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.Group?>
 
-<GridPane hgap="5.0" maxHeight="Infinity" maxWidth="Infinity" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cuny.brooklyn.project.controller.FlashFrameViewController">
-<!--TODO: Implement this so that it's similar to last project game settings-->
+<BorderPane padding = "GameSettings.PADDING_X">
+	<bottom>
+		<HBox alignment = "Pos.CENTER" spacing = "GameSettings.H_SPACING" padding = "GameSettings.PADDING">
+			<children>
+				<Button fx:id="saveAndReturn" mnemonicParsing="false"
+					text="Button" />
+			</children>
+		</HBox>
+	</bottom>
+	
+	<left>
+		<VBox alignment = "Pos.CENTER" spacing = "GameSettings.H_SPACING" padding = "GameSettings.Padding">
+			<children>
+				<Label text="%puzzlerSettingsHeader" />
+				<Label fx:id="puzzlerLabel" text="Label" />
+				<Group fx:id="puzzlerGroup">		
+					<Button fx:id="randomPuzzler" mnemonicParsing="false" 
+						text="Button" />
+					<Button fx:id="sqrtPuzzler" mnemonicParsing="false" 
+						text="Button" />
+					<Button fx:id="slidingCupsPuzzler" mnemonicParsing="false" 
+						text="Button" />
+				</Group>	
+			</children>
+		</VBox>
+	</left>
+	
+	<right>
+		<VBox alignment = "Pos.CENTER" spacing = "GameSettings.H_SPACING" padding = "GameSettings.Padding">
+			<children>
+				<Label text="%diffcSettingsHeader" />
+				<Label fx:id="diffcLabel" text="Label" />
+				<Group fx:id="diffcGroup">
+					<Button fx:id="easyDiffc" mnemonicParsing="false" 
+						text="Button" />
+					<Button fx:id="normalDiffc" mnemonicParsing="false" 
+						text="Button" />
+					<Button fx:id="hardDiffc" mnemonicParsing="false" 
+						text="Button" />
+				</Group>
+			</children>	
+		</VBox>
+	</right>
+</BorderPane>
 
-</GridPane>
+

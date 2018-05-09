@@ -57,10 +57,23 @@ public class GameSettings {
 	public static final String TREASURE_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_treasureframeview.fxml";
 	public static final String PUZZLER_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_puzzlerframeview.fxml";
 	public static final String FLASH_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_flashframeview.fxml";
-
+	public static final String SETTINGS_VIEW_PATH = "edu/cuny/brooklyn/project/view/fxml_settingsframeview.fxml";
+	
+	public final static String MSG_SETTINGS_PUZZLER_SLIDING_CUPS_KEY= "slidingCupsPuzzler";
+	public final static String MSG_SETTINGS_PUZZLER_SQRT_KEY = "sqrtPuzzler";
+	public final static String MSG_SETTINGS_PUZZLER_RANDOM_KEY = "randomPuzzler";
+	public final static String MSG_SETTINGS_PUZZLER_TITLE_KEY = "puzzlerSettingsHeader";
+	public final static String MSG_SETTINGS_DIFFC_EASY_KEY= "easyDiffc";
+	public final static String MSG_SETTINGS_DIFFC_NORMAL_KEY = "normalDiffc";
+	public final static String MSG_SETTINGS_DIFFC_HARD_KEY = "hardDiffc";
+	
+	public final static String MSG_SETTINGS_SAVE_KEY = "saveSettings";
+	public final static String MSG_SETTINGS_DIFFC_TITLE_KEY = "diffcSettingsHeader";
+	public final static String MSG_APP_TITLE_SETTINGS_KEY = "settingsTitle";
 	
 	public final static String MSG_GAME_DESCRIPTION_KEY = "gameDescription";
 	public final static String MSG_START_GAME_KEY = "startGame";
+	public final static String MSG_SETTINGS_GAME_KEY = "settings";
 	public final static String MSG_APP_TITLE_FLASH_KEY = "appTitleFlash";
 	
 	public final static String MSG_ANSWER_PUZZLER_KEY = "answerPuzzler";
